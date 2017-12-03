@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Anho:</strong>
+  <%= @gastospropiedad.anho %>
+</p>
+
+<p>
+  <strong>Mes:</strong>
+  <%= @gastospropiedad.mes %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @gastospropiedad.monto %>
+</p>
+
+<%= link_to 'Edit', edit_gastospropiedad_path(@gastospropiedad) %> |
+<%= link_to 'Back', gastospropiedads_path %>

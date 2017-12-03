@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gastospropiedads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Anho</th>
+      <th>Mes</th>
+      <th>Monto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gastospropiedads.each do |gastospropiedad| %>
+      <tr>
+        <td><%= gastospropiedad.anho %></td>
+        <td><%= gastospropiedad.mes %></td>
+        <td><%= gastospropiedad.monto %></td>
+        <td><%= link_to 'Show', gastospropiedad %></td>
+        <td><%= link_to 'Edit', edit_gastospropiedad_path(gastospropiedad) %></td>
+        <td><%= link_to 'Destroy', gastospropiedad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gastospropiedad', new_gastospropiedad_path %>

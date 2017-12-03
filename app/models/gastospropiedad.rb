@@ -1,0 +1,2 @@
+class Gastospropiedad < ApplicationRecord
+end

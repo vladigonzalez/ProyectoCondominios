@@ -1,0 +1,32 @@
+<%= form_with(model: gastospropiedad, local: true) do |form| %>
+  <% if gastospropiedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gastospropiedad.errors.count, "error") %> prohibited this gastospropiedad from being saved:</h2>
+
+      <ul>
+      <% gastospropiedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :anho %>
+    <%= form.number_field :anho, id: :gastospropiedad_anho %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mes %>
+    <%= form.number_field :mes, id: :gastospropiedad_mes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monto %>
+    <%= form.number_field :monto, id: :gastospropiedad_monto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
